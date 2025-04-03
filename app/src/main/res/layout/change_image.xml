@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main">
+
+    <!-- Include layout header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/image_header"/>
+    </LinearLayout>
+
+    <!-- Nội dung chính, đặt trong một LinearLayout riêng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp">
+
+
+    <!-- ImageView hình tròn -->
+
+        <!-- Nút "Chọn file" -->
+        <ImageView
+            android:id="@+id/imgMultipart"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn File"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Nút "Upload images" -->
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Images" />
+    </LinearLayout>
+
+</LinearLayout>

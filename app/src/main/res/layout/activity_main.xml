@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <include layout="@layout/image_header" />
+
+    <!-- Ảnh đại diện -->
+    <ImageView
+        android:id="@+id/imgChoose"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/avatar"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background" />
+
+    <!-- Thông tin người dùng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <include layout="@layout/item_row" />
+    </LinearLayout>
+
+    <!-- Nút Đăng xuất -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/black"
+        android:text="ĐĂNG XUẤT"
+        android:textColor="@android:color/white" />
+</LinearLayout>
