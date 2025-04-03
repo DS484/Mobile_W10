@@ -19,22 +19,10 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface ServiceAPI {
-    public static final String BASE_URL = "http://app.iotstar.vn:8081/appfoods/";
-    Gson gson = new GsonBuilder().setDateFormat("yyyy MM dd HH:mm:ss").create();
-
-    ServiceAPI serviceapi = new Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .build()
-            .create(ServiceAPI.class);
-
     @Multipart
-    @POST("upload.php")
-    Call<List<ImageUpload>> upload(@Part MultipartBody.Part avatar);
-
-    @Multipart
-    @POST("upload1.php")
-    Call<Message> upload1(@Part(Const.MY_USERNAME) RequestBody username,
-                          @Part MultipartBody.Part avatar);
+    @POST("test/update-profile")
+    Call<ImageUpload> upload(
+            @Part MultipartBody.Part avatar
+    );
 }
 

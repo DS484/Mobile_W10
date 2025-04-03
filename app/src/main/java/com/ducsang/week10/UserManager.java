@@ -2,6 +2,7 @@ package com.ducsang.week10;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.ducsang.week10.model.User;
 
@@ -26,4 +27,5 @@ public class UserManager {
         SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         prefs.edit().remove(KEY_USER).apply();
     }
+
 }
